@@ -2,9 +2,11 @@ package ml.noderyos.rpg;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import club.minnced.discord.rpc.*;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException{
+        discordRPC();
         game();
     }
     public static void game() throws InterruptedException{
@@ -130,5 +132,18 @@ public class Main {
     public static void inventory(List<Entity> Players,List<Entity> Mobs,int mort,Entity mob,Scanner scan, boolean inCombat) throws InterruptedException{
         System.out.println("Vous avez : \n" + Players.get(0).getInventory());
         fight(Players,Mobs,mort,scan,inCombat,mob);
+    }
+
+
+
+
+    public static void discordRPC(){
+        DiscordRPC lib = DiscordRPC.INSTANCE;
+        DiscordEventHandlers handlers = new DiscordEventHandlers();
+        lib.Discord_Initialize("826877975836098611", handlers, true, "");
+        DiscordRichPresence presence = new DiscordRichPresence();
+        presence.details = "by Noderyos";
+        presence.largeImageKey = "rpg";
+        lib.Discord_UpdatePresence(presence);
     }
 }
