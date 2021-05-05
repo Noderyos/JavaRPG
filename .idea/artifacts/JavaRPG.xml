@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaRPG">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaRPG</output-path>
+    <root id="archive" name="JavaRPG.jar">
+      <element id="module-output" name="RPG" />
+      <element id="extracted-dir" path="$USER_HOME$/Téléchargements/java-discord-rpc-2.0.1-all.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
